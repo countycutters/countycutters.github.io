@@ -367,40 +367,50 @@
         
     </script>
     <script>
-  function initMap() {
-    // Center point between Hickling & Beccles
-    const centerPoint = {
-      lat: 52.458,   // roughly central
-      lng: 1.563
-    };
+function initMap() {
+  const center = { lat: 52.55, lng: 1.35 }; // Center of drawn area
 
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: centerPoint,
-      zoom: 9,
-      mapTypeControl: false,
-      streetViewControl: false,
-      fullscreenControl: false
-    });
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 9,
+    center: center,
+  });
 
-    // Service area circle (18 miles ≈ 29,000 meters)
-    const serviceArea = new google.maps.Circle({
-      strokeColor: "#00a651",
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillColor: "#00a651",
-      fillOpacity: 0.15,
-      map: map,
-      center: centerPoint,
-      radius: 29000
-    });
+  // Approximated border from your drawing
+  const serviceAreaCoords = [
+    // North coast (Norfolk)
+    { lat: 52.95, lng: 1.25 },
+    { lat: 52.92, lng: 1.40 },
+    { lat: 52.88, lng: 1.55 },
 
-    // Optional center marker
-    new google.maps.Marker({
-      position: centerPoint,
-      map: map,
-      title: "County Cutters – Service Area"
-    });
-  }
+    // East coast downwards
+    { lat: 52.70, lng: 1.70 },
+    { lat: 52.55, lng: 1.72 },
+    { lat: 52.40, lng: 1.65 },
+    { lat: 52.25, lng: 1.55 },
+
+    // Southern curve (Suffolk)
+    { lat: 52.20, lng: 1.30 },
+    { lat: 52.22, lng: 1.05 },
+    { lat: 52.30, lng: 0.90 },
+
+    // Western edge up through inland Norfolk
+    { lat: 52.45, lng: 0.95 },
+    { lat: 52.60, lng: 1.00 },
+    { lat: 52.75, lng: 1.05 },
+    { lat: 52.90, lng: 1.15 },
+  ];
+
+  const serviceArea = new google.maps.Polygon({
+    paths: serviceAreaCoords,
+    strokeColor: "#00a651",
+    strokeOpacity: 0.9,
+    strokeWeight: 2,
+    fillColor: "#00a651",
+    fillOpacity: 0.25,
+  });
+
+  serviceArea.setMap(map);
+}
 </script>
 
 <script

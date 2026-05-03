@@ -69,30 +69,6 @@
         </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Story</h2>
-            </div>
-            <div class="services-detailed-grid">
-                <div class="service-detailed-card">
-                    <div class="service-detailed-icon">🌿</div>
-                    <div class="service-detailed-content">
-                        <h3 class="service-detailed-title">Founded on Passion</h3>
-                        <p class="service-detailed-description">County Cutters was created by two motivated friends who saw a need for reliable, affordable garden care in our local area. What started as a few weekend jobs quickly grew into a full service, offering everything from lawn care to hedge trimming, pressure washing, planting and more. We built the company on the values of hard work, honesty and quality - treating every garden as if it were our own.</p>
-                    </div>
-                </div>
-                <div class="service-detailed-card">
-                    <div class="service-detailed-icon">🎯</div>
-                    <div class="service-detailed-content">
-                        <h3 class="service-detailed-title">Our Mission</h3>
-                        <p class="service-detailed-description">Our mission is to provide dependable, high-quality garden and outdoor services that make every customer’s space cleaner, safer and better looking. We aim to deliver professional results at fair prices, with friendly service, attention to detail and a commitment to leaving every property better than we found it.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Meet the Team Section -->
     <section class="section section-alt">
@@ -106,21 +82,12 @@
                     <div class="service-icon" style="font-size: 4rem; margin-bottom: 1rem;">👨‍🌾</div>
                     <h3 class="service-detailed-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">Ethan</h3>
                     <p class="testimonial-author" style="margin-bottom: 0.5rem; color: var(--color-primary);">Co-Founder</p>
-                    <p class="service-detailed-description"></p>
                 </div>
                 <div class="testimonial-card">
                     <div class="service-icon" style="font-size: 4rem; margin-bottom: 1rem;">👨‍🌾</div>
                     <h3 class="service-detailed-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">Thomas</h3>
                     <p class="testimonial-author" style="margin-bottom: 0.5rem; color: var(--color-primary);">Co-Founder</p>
-                    <p class="service-detailed-description"></p>
                 </div>
-            <div class="testimonial-card">
-                    <div class="service-icon" style="font-size: 4rem; margin-bottom: 1rem;">👨‍🌾</div>
-                    <h3 class="service-detailed-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">Tad</h3>
-                    <p class="testimonial-author" style="margin-bottom: 0.5rem; color: var(--color-primary);">Employee</p>
-                    <p class="service-detailed-description"></p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -230,27 +197,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Area Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 id= "linker" class="section-title">Our Service Area</h2>
-                <p class="section-subtitle">Proudly serving Norfolk and Suffolk</p>
-            </div>
-            <div class="testimonial-card" style="max-width: 800px; margin: 0 auto;">
-                <div class="service-icon" style="font-size: 4rem; text-align: center; margin: 0 auto 1.5rem; display: block;">📍</div>
-                <p class="service-detailed-description" style="text-align: center; margin-bottom: 1.5rem;">
-                    County Cutters is based in Beccles and Hickling and provides professional landscaping services throughout the local area. We proudly serve the following regions:
-                </p>
-                <div class="service-features" style="max-width: 500px; margin: 0 auto;">
-                    <li>East Norfolk</li>
-                    <li>North Suffolk</li>
-                </div>
-                <div id="map"></div>
             </div>
         </div>
     </section>
@@ -367,58 +313,5 @@
         });
         
     </script>
-    <script>
-function initMap() {
-  const center = { lat: 52.55, lng: 1.35 }; // Center of drawn area
-
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 9,
-    center: center,
-  });
-
-  // Approximated border from your drawing
-  const serviceAreaCoords = [
-    // North coast (Norfolk)
-    { lat: 52.95, lng: 1.25 },
-    { lat: 52.92, lng: 1.40 },
-    { lat: 52.88, lng: 1.55 },
-
-    // East coast downwards
-    { lat: 52.70, lng: 1.70 },
-    { lat: 52.55, lng: 1.72 },
-    { lat: 52.40, lng: 1.65 },
-    { lat: 52.25, lng: 1.55 },
-
-    // Southern curve (Suffolk)
-    { lat: 52.20, lng: 1.30 },
-    { lat: 52.22, lng: 1.05 },
-    { lat: 52.30, lng: 0.90 },
-
-    // Western edge up through inland Norfolk
-    { lat: 52.45, lng: 0.95 },
-    { lat: 52.60, lng: 1.00 },
-    { lat: 52.75, lng: 1.05 },
-    { lat: 52.90, lng: 1.15 },
-  ];
-
-  const serviceArea = new google.maps.Polygon({
-    paths: serviceAreaCoords,
-    strokeColor: "#00a651",
-    strokeOpacity: 0.9,
-    strokeWeight: 2,
-    fillColor: "#00a651",
-    fillOpacity: 0.25,
-  });
-
-  serviceArea.setMap(map);
-}
-</script>
-
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7JwIwCSu7GLcro3wjqubBfjLTm5IXMIo&callback=initMap"
-  async
-  defer>
-</script>
-
 </body>
 </html>

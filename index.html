@@ -112,9 +112,9 @@
                 </div>
                 <!-- Service Card 3 -->
                 <div class="service-card">
-                    <div class="service-icon">🍂</div>
-                    <h3 class="service-title">Garden Clearance</h3>
-                    <p class="service-description">Complete garden waste removal and clearance services to transform overgrown spaces.</p>
+                    <div class="service-icon">🚗</div>
+                    <h3 class="service-title">Car Cleaning</h3>
+                    <p class="service-description">Professional mobile car cleaning services including exterior hand wash and interior valeting.</p>
                     <a href="services.html" class="service-link">
                         Learn More
                         <svg class="link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -161,12 +161,10 @@
     <div class="section-header">
       <h2 class="section-title">Our Service Area</h2>
       <p class="section-subtitle">
-        We proudly serve Norfolk and Suffolk and surrounding areas.
+        County Cutters is based in Beccles and Hickling and provides professional landscaping services throughout the local area.
       </p>
-      <a href="about.html#linker" class="btn btn-primary" style="margin-top: 40px;">
-        View Service Area Map
-      </a>
     </div>
+    <div id="map"></div>
   </div>
 </section>
 
@@ -310,5 +308,66 @@
             lastScroll = currentScroll;
         });
     </script>
+    <script>
+        function initMap() {
+            const center = { lat: 52.55, lng: 1.35 }; // Center of drawn area
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 9,
+                center: center,
+            });
+
+            // Approximated border from your drawing
+            const serviceAreaCoords = [
+                // North coast (Norfolk)
+                { lat: 52.95, lng: 1.25 },
+                { lat: 52.92, lng: 1.40 },
+                { lat: 52.88, lng: 1.55 },
+
+                // East coast downwards
+                { lat: 52.70, lng: 1.70 },
+                { lat: 52.55, lng: 1.72 },
+                { lat: 52.40, lng: 1.65 },
+                { lat: 52.25, lng: 1.55 },
+
+                // Southern curve (Suffolk)
+                { lat: 52.20, lng: 1.30 },
+                { lat: 52.22, lng: 1.05 },
+                { lat: 52.30, lng: 0.90 },
+
+                // Western edge up through inland Norfolk
+                { lat: 52.45, lng: 0.95 },
+                { lat: 52.60, lng: 1.00 },
+                { lat: 52.75, lng: 1.05 },
+                { lat: 52.90, lng: 1.15 },
+            ];
+
+            const serviceArea = new google.maps.Polygon({
+                paths: serviceAreaCoords,
+                strokeColor: "#00a651",
+                strokeOpacity: 0.9,
+                strokeWeight: 2,
+                fillColor: "#00a651",
+                fillOpacity: 0.25,
+            });
+
+            serviceArea.setMap(map);
+
+            // Add markers for Beccles and Hickling
+            const locations = [
+                { lat: 52.4578, lng: 1.5626, title: "Based in Beccles" },
+                { lat: 52.7416, lng: 1.5841, title: "Based in Hickling" }
+            ];
+
+            locations.forEach(location => {
+                new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.title,
+                });
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7JwIwCSu7GLcro3wjqubBfjLTm5IXMIo&callback=initMap" async defer></script>
 </body>
 </html>

@@ -36,12 +36,11 @@
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="services.html" class="nav-link">Services</a>
                     <a href="gallery.html" class="nav-link active">Gallery</a>
-                    <a href="quote.html" class="nav-link">Quotes</a>
-                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="about.html" class="nav-link">About</a>
                     <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="reviews.html" class="nav-link">Leave a Review</a>
+                    <a href="quote.html" class="nav-link nav-cta">Get a Quote</a>
                 </nav>
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -52,10 +51,10 @@
                 <a href="index.html" class="nav-link-mobile">Home</a>
                 <a href="services.html" class="nav-link-mobile">Services</a>
                 <a href="gallery.html" class="nav-link-mobile active">Gallery</a>
-                <a href="quote.html" class="nav-link-mobile">Quotes</a>
-                <a href="about.html" class="nav-link-mobile">About Us</a>
+                <a href="about.html" class="nav-link-mobile">About</a>
                 <a href="contact.html" class="nav-link-mobile">Contact</a>
                 <a href="reviews.html" class="nav-link-mobile">Leave a Review</a>
+                <a href="quote.html" class="nav-link-mobile nav-cta">Get a Quote</a>
             </nav>
         </div>
     </header>
@@ -239,30 +238,28 @@
                     <p class="section-subtitle">Restoring surfaces to their former glory.</p>
                 </div>
                 <div class="before-after-grid">
-                    <div class="before-after-grid">
                     <div class="before-after-card">
                         <div class="job-gallery">
                             <div class="job-gallery-column">
                                 <h4 class="job-gallery-title">Before</h4>
                                 <div class="job-image-grid">
-                                    <a href="images/pressure washing/my patio/before/lightbox/PXL_20260510_111348545 (1).webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/before/thumbnail/PXL_20260510_111348545.webp"  loading="lazy"></a>
-                                    <a href="images/pressure washing/my patio/before/lightbox/PXL_20260510_111358587.webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/before/thumbnail/PXL_20260510_111358587 (1).webp"  loading="lazy"></a>
-                                    <a href="images/pressure washing/my patio/before/lightbox/PXL_20260510_111408034.webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/before/thumbnail/PXL_20260510_111408034 (1).webp"  loading="lazy"></a>
+                                    <a href="images/pressure washing/my patio/before/lightbox/PXL_20260510_111348545 (1).webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/before/thumbnail/PXL_20260510_111348545.webp" alt="Weathered patio before pressure washing" loading="lazy"></a>
+                                    <a href="images/pressure washing/my patio/before/lightbox/PXL_20260510_111358587.webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/before/thumbnail/PXL_20260510_111358587 (1).webp" alt="Moss and dirt on patio slabs before cleaning" loading="lazy"></a>
+                                    <a href="images/pressure washing/my patio/before/lightbox/PXL_20260510_111408034.webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/before/thumbnail/PXL_20260510_111408034 (1).webp" alt="Grimy patio surface before pressure washing" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="job-gallery-column">
                                 <h4 class="job-gallery-title">After</h4>
                                 <div class="job-image-grid">
-                                    <a href="images/pressure washing/my patio/after/lightbox/PXL_20260510_155346645~2 (1).webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/after/thumbnail/PXL_20260510_155346645~2.webp"  loading="lazy"></a>
-                                    <a href="images/pressure washing/my patio/after/lightbox/PXL_20260510_155418393~2.webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/after/thumbnail/PXL_20260510_155418393~2 (1).webp"  loading="lazy"></a>
-                                    <a href="images/pressure washing/my patio/after/lightbox/PXL_20260510_155425222~2 (1).webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/after/thumbnail/PXL_20260510_155425222~2.webp"  loading="lazy"></a>
+                                    <a href="images/pressure washing/my patio/after/lightbox/PXL_20260510_155346645~2 (1).webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/after/thumbnail/PXL_20260510_155346645~2.webp" alt="Clean patio after pressure washing" loading="lazy"></a>
+                                    <a href="images/pressure washing/my patio/after/lightbox/PXL_20260510_155418393~2.webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/after/thumbnail/PXL_20260510_155418393~2 (1).webp" alt="Restored patio slabs after cleaning" loading="lazy"></a>
+                                    <a href="images/pressure washing/my patio/after/lightbox/PXL_20260510_155425222~2 (1).webp" class="job-image-wrapper"><img src="images/pressure washing/my patio/after/thumbnail/PXL_20260510_155425222~2.webp" alt="Patio surface restored to original condition" loading="lazy"></a>
                                 </div>
                             </div>
                         </div>
                         <h3 class="before-after-title">Patio Pressure washing</h3>
                         <p class="before-after-description">Restoring a weathered patio to its original condition.</p>
                     </div>
-                </div>
                 </div>
             </section>
 
@@ -491,7 +488,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 County Cutters. All rights reserved.</p>
+                <p>&copy; <span id="year">2025</span> County Cutters. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -500,46 +497,15 @@
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <div class="lightbox-prev">&lt;</div>
-        <img class="lightbox-content" id="lightbox-img" src="" alt="Gallery Image">
+        <img class="lightbox-content" id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Enlarged photo of County Cutters' work">
         <div class="lightbox-next">&gt;</div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- Shared behaviour (menu, header, year, image loading) -->
+    <script src="main.js" defer></script>
+
+    <!-- Gallery-specific behaviour: filtering + lightbox -->
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMobile = document.querySelector('.nav-mobile');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMobile.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking a link
-        const mobileLinks = document.querySelectorAll('.nav-link-mobile');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                navMobile.classList.remove('active');
-            });
-        });
-
-        // Add scroll effect to header
-        let lastScroll = 0;
-        const header = document.querySelector('.header');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            
-            lastScroll = currentScroll;
-        });
-
         // --- Gallery Filter and Dynamic Visibility Logic ---
         const filterButtons = document.querySelectorAll('.filter-btn');
         const gallerySections = document.querySelectorAll('.project-category-section');
